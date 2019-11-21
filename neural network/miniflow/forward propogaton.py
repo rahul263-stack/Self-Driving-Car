@@ -23,48 +23,73 @@ class Node(object):
 
 class Input(Node):
     def __init__(self):
-        # an Input node has no inbound nodes,
+        # An Input Node has no inbound nodes,
         # so no need to pass anything to the Node instantiator
         Node.__init__(self)
 
-    # NOTE: Input node is the only node that may
-    # receive its value as an argument to forward().
+    # NOTE: Input Node is the only Node where the value
+    # may be passed as an argument to forward().
     #
-    # All other node implementations should calculate their
-    # values from the value of previous nodes, using
-    # self.inbound_nodes
+    # All other Node implementations should get the value
+    # of the previous nodes from self.inbound_nodes
     #
     # Example:
     # val0 = self.inbound_nodes[0].value
     def forward(self, value=None):
+        # Overwrite the value if one is passed in.
         if value is not None:
             self.value = value
 
 
+"""
+Can you augment the Add class so that it accepts
+any number of nodes as input?
+
+Hint: this may be useful:
+https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists
+"""
+
+
+class Mul(Node):
+    # You may need to change this...
+    def __init__(self, *inputs):
+        Node.__init__(self, inputs)
+
+    def forward(self):
+        val = 1
+        for i in range(0, len(self.inbound_nodes)):
+            val *= self.inbound_nodes[i].value
+
+        self.value = val
+
+
 class Add(Node):
-    def __init__(self, x, y):
-        # You could access `x` and `y` in forward with
-        # self.inbound_nodes[0] (`x`) and self.inbound_nodes[1] (`y`)
-        Node.__init__(self, [x, y])
+    # You may need to change this...
+    def __init__(self, *inputs):
+        Node.__init__(self, inputs)
 
     def forward(self):
         """
-        Set the value of this node (`self.value`) to the sum of its inbound_nodes.
-
-        Your code here!
+        For reference, here's the old way from the last
+        quiz. You'll want to write code here.
         """
+        # print(len(self.inbound_nodes))
+        val = 0
+        for i in range(0, len(self.inbound_nodes)):
+            val += self.inbound_nodes[i].value
 
-
-"""
-No need to change anything below here!
-"""
+        print(val)
+        x_value = self.inbound_nodes[0].value
+        y_value = self.inbound_nodes[1].value
+        z_value = self.inbound_nodes[2].value
+        self.value = val
 
 
 def topological_sort(feed_dict):
     """
-    Sort generic nodes in topological order using Kahn's Algorithm.
+    Sort the nodes in topological order using Kahn's Algorithm.
 
-    `feed_dict`: A dictionary where the key is a `Input` node and the value is the respective value feed to that node.
+    `feed_dict`: A dictionary where the key is a `Input` Node and the value is the respective value feed to that Node.
 
     Returns a list of sorted nodes.
     """
@@ -113,12 +138,12 @@ def forward_pass(output_node, sorted_nodes):
 
     Returns the output Node's value
     """
-    val = 0
+
+    # val = 0
     for n in sorted_nodes:
-       # print(n.value)
-        if n.value  is not None:
-            val += n.value
+        # if n.value is not None:
+        # val += n.value
         n.forward()
 
-    output_node.value = val
+    # output_node.value = val
     return output_node.value
