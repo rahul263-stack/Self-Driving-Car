@@ -7,13 +7,13 @@ def draw(x1,x2):
     ln[0].remove()
 
 def sigmoid(z):
-    return 1/ (1+ np.exp(-z))
+    return 1/ (1+ np.exp(-z)) # sigmoid formula
 
 def calculate_error(line_pramenters, points, y):
     m = points.shape[0]
     p = sigmoid(points * line_pramenters)
     print(np.log(p).shape)
-    cross_entropy = -(1 /m) * (np.log(p).T * y + np.log(1-p).T * (1 - y))
+    cross_entropy = -(1 /m) * (np.log(p).T * y + np.log(1-p).T * (1 - y))  # cross entropy
     return cross_entropy
 
 def gradient_descent(line_parameters, points, y , alpha):
