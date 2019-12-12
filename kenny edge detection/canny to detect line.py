@@ -18,6 +18,6 @@ low_threshold = 1
 high_threshold = 200
 edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 
-# Display the image
+# Display the image plt.show in case of other ide except jupyter
 plt.imshow(edges, cmap='Greys_r')
 plt.show()
