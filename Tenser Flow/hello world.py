@@ -1,7 +1,7 @@
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
-# Create TensorFlow object called tensor
+# Create TensorFlow object tensor
 hello_constant = tf.constant('Hello World!')
 # Print hello world in TensorFlow 
 with tf.Session() as sess:
