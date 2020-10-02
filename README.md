@@ -1,12 +1,12 @@
 
 
 
-# IMPORTANT
-Absolutely, under NO circumstance, should one ever pilot a car using computer vision software trained with this code (or any home made software for that matter). It is extremely dangerous to use your own self-driving software in a car, even if you think you know what you're doing, not to mention it is quite illegal in most places and any accidents will land you in huge lawsuits.
+# IMPORTANT 
+Absolutely, under NO circumstance, one should ever pilot a car using computer vision software trained with this code (or any home made software for that matter). It is extremely dangerous to use your own self-driving software in a car, even if you think you know what you're doing, not to mention it is quite illegal in most places and any accidents will land you in huge lawsuits.
 
-This code is purely for research and statistics, absolutley NOT for application or testing of any sort.
+This code is purely for research and statistics, absolutley NOT for application or testing of any sort.So Please do not apply to any of your application .Meant for only college project.
 
-# How to Use
+# Procedure for using 
 Download the [dataset]https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view) and extract into the repository folder
 
 Use `python train.py` to train the model
