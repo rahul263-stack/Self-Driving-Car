@@ -8,6 +8,7 @@ This code is purely for research and statistics, absolutley NOT for application 
 
 # How to Use
 Download the [dataset]https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view) and extract into the repository folder
+You can use udacity self driving dataset also depending on what suits you
 
 Use `python train.py` to train the model
 
