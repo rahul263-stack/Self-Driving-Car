@@ -7,7 +7,7 @@ Absolutely, under NO circumstance, should one ever pilot a car using computer vi
 This code is purely for research and statistics, absolutley NOT for application or testing of any sort.
 
 # How to Use
-Download the [dataset]https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view) and extract into the repository folder
+Download the [dataset]https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view) and extract into the repository folder if u want u can use other  data sets also
 You can use udacity self driving dataset also depending on what suits you
 
 Use `python train.py` to train the model
