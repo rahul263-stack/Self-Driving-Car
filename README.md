@@ -1,20 +1,20 @@
 
+#Self Driving Car Uaing Tensorfolw
+This project is implementaion of End to end Learning for self driving ca research paper by nvidia
 
 
-# IMPORTANT
-Absolutely, under NO circumstance, should one ever pilot a car using computer vision software trained with this code (or any home made software for that matter). It is extremely dangerous to use your own self-driving software in a car, even if you think you know what you're doing, not to mention it is quite illegal in most places and any accidents will land you in huge lawsuits.
 
-This code is purely for research and statistics, absolutley NOT for application or testing of any sort.
+This code is purely for research and statistics, absolutley NOT for application or testing of any sort.do not use  it on computer vision software trained with this code
 
 # How to Use
 Download the [dataset]https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view) and extract into the repository folder if u want u can use other  data sets also
 You can use udacity self driving dataset also depending on what suits you
+python train.py - To train this model
 
-Use `python train.py` to train the model
+python run.py - Use this to run the program on a live cam feed.
 
-Use `python run.py` to run the model on a live webcam feed
+`python run_dataset.py`  - use this to run the program on datasets
 
-Use `python run_dataset.py` to run the model on the dataset
-
-To visualize training using Tensorboard use `tensorboard --logdir=./logs`, then open http://0.0.0.0:6006/ into your web browser.
+To see visual training
+ `tensorboard --logdir=./logs`, then open http://0.0.0.0:6006/ into your web browser
 
