@@ -1,5 +1,5 @@
 
-#Self Driving Car Uaing Tensorfolw
+# Self Driving Car Uaing Tensorfolw
 This project is implementaion of End to end Learning for self driving ca research paper by nvidia
 
 Requirments :
@@ -24,4 +24,9 @@ You can use udacity self driving dataset also depending on what suits you
 
 To see visual training
  `tensorboard --logdir=./logs`, then open http://0.0.0.0:6006/ into your web browser
+ 
+ # Acknowledged
+ https://arxiv.org/pdf/1604.07316.pdf - end to end self driving car
+ https://arxiv.org/pdf/1704.03952.pdf - Virtual to  Real Reinforcement Learning for
+Autonomous Driving
 
