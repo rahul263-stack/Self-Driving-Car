@@ -2,6 +2,12 @@
 #Self Driving Car Uaing Tensorfolw
 This project is implementaion of End to end Learning for self driving ca research paper by nvidia
 
+Requirments :
+
+tensorflow >2
+python 3.5>
+open cv
+scipy
 
 
 This code is purely for research and statistics, absolutley NOT for application or testing of any sort.do not use  it on computer vision software trained with this code
